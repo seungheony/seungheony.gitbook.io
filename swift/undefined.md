@@ -62,3 +62,44 @@ print("The current value of friendlyWelcome is \(friendlyWelcome)")
 
 ## 주석 (Comments)
 
+주석은 쉽다 C에서 사용하던 것과 동일하게 작성하면 된다.&#x20;
+
+그래도 너무 짧으면 좀 그러니까 예제 코드는 아래에 남겨놓는다.&#x20;
+
+```swift
+// This is a comment.
+
+/* This is the start of the first multiline comment.
+ /* This is the second, nested multiline comment. */
+This is the end of the first multiline comment. */
+```
+
+## 세미콜론 (Semicolons)
+
+Swift에서는 코드 한줄이 끝날 때, 세미콜론을 붙혀주는게 필수가 아니다. Swift를 사용하면서 이게 참 좋았다.&#x20;
+
+그래도 다음과 같이 여러 구문을 한줄로 작성할 때에는 써주어야 한다.&#x20;
+
+```swift
+let cat = "🐱"; print(cat)
+// Prints "🐱"
+```
+
+## 정수 (Integers)
+
+정수는 사실 너무 당연한 개념들이 많이 포함되어 있어서 길게 적진 않겠지만 몰랐던 개념들이 있어서 그것들을 살펴보고 넘어가보자
+
+Swift는 8, 16, 32 그리고 64bit 형태의 부호가 있는 정수와 부호가 없는 정수를 지원한다. 이는 `UInt8` (Unsigned Int 8Bit)와 같이 C와 비슷한 이름을 가진다.&#x20;
+
+## 부동 소수점 숫자 (Floating-Point Numbers)
+
+
+
+
+
+
+
+
+
+
+
