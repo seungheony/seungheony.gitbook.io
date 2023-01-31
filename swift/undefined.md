@@ -87,13 +87,13 @@ let cat = "🐱"; print(cat)
 
 ## 정수 (Integers)
 
-정수는 사실 너무 당연한 개념들이 많이 포함되어 있어서 길게 적진 않겠지만 몰랐던 개념들이 있어서 그것들을 살펴보고 넘어가보자
+정수는 사실 너무 당연한 개념들이 많이 포함되어 있어서 길게 적진 않겠지만 몰랐던 개념들이 있어서 그것들만 살펴보고 넘어가보자
 
 Swift는 8, 16, 32 그리고 64bit 형태의 부호가 있는 정수와 부호가 없는 정수를 지원한다. 이는 `UInt8` (Unsigned Int 8Bit)와 같이 C와 비슷한 이름을 가진다.&#x20;
 
 ## 부동 소수점 숫자 (Floating-Point Numbers)
 
-
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>ㅇㅎㅎㅇ</td><td>ㄴㅇㄴㅇㄹ</td><td>ㅁㅈㅁㅁㅈㅇ</td><td><a href="../">..</a></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr></tbody></table>
 
 
 
