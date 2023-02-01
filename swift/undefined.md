@@ -93,13 +93,74 @@ Swift는 8, 16, 32 그리고 64bit 형태의 부호가 있는 정수와 부호�
 
 ## 부동 소수점 숫자 (Floating-Point Numbers)
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>ㅇㅎㅎㅇ</td><td>ㄴㅇㄴㅇㄹ</td><td>ㅁㅈㅁㅁㅈㅇ</td><td><a href="../">..</a></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr></tbody></table>
+이름이 어렵긴 한데 그냥 분수 성분을 가진 소수같은 숫자다. 부동 소수점 숫자를 표현할 수 있는 타입은 두 가지가 있는데 다음과 같다.&#x20;
+
+* `Double`: 64-bit
+* `Float`: 32-bit
+
+> NOTE\
+> `Double` 은 최소 15자리의 소수점 정확도를 가지고 있는것에 반해 `Float` 는 더 적은 6자리의 정확도를 가진다. 사용할 적절한 부동 소수점 타입은 코드에서 작업해야하는 값의 특성과 범위에 따라 다르다. [<mark style="color:blue;">두 타입 중에는</mark> <mark style="color:blue;"></mark><mark style="color:blue;">`Double`</mark> <mark style="color:blue;"></mark><mark style="color:blue;">이 선호된다.</mark> ](#user-content-fn-1)[^1]<mark style="color:blue;"></mark>
+
+## <mark style="background-color:orange;">타입 세이프티와 타입 유추 (Type Safety and Type Inference)</mark>
+
+먼가 중요해 보이는 개념이다. 자세하게 알아보도록 하자
+
+&#x20;위에서도 언급했듯이 Swift는 타입-세이프(Type-Safe) 언어이다. 각 변수나 인스턴스에 할당된 타입이 아닌 잘못된 타입이 전달될 수 없다. 그래서 Swift에서는 각 값의 타입을 명확하게 알 수 있다.&#x20;
+
+잘못된 타입을 전달 하는지는 컴파일 타임에 타입 검사를 수행해서 일치하지 않는 타입이 전달되면 이를 오류로 표시한다.&#x20;
+
+또한 타입이 명시적으로 선언되지 않는 경우에는 컴파일러가 **타입 유추(Type Infernce)** 를 수행해서 특정 식의 타입을 자동으로 유추할 수 있다.&#x20;
+
+## 숫자 리터럴 (Numeric Literals)
+
+정수 리터럴은 아래와 같이 쓸 수 있다.&#x20;
+
+* 접두사 없는 _10진수_
+* `0b` 접두사로 _2진수_
+* `0o` 접두사로 _8진수_
+* `0x` 접두사로 _16진수_
+
+아래의 예에서 모든 정수 리터럴은 10진수 `17` 의 값을 가진다:
+
+```swift
+let decimalInteger = 17
+let binaryInteger = 0b10001       // 17 in binary notation
+let octalInteger = 0o21           // 17 in octal notation
+let hexadecimalInteger = 0x11     // 17 in hexadecimal notation
+```
+
+부동 소수점 리터럴은 10진수 (접두사 없음) 또는 16진수 (접두사 `0x`) 일 수 있다. 소수점 양쪽에 항상 숫자 (또는 16진수)가 있어야 한다. 10진수는 대문자 또는 소문자 e로 표시되는 _지수_ 를 가질 수도 있다. 16진수는 대문자 또는 소문자 p로 표시되는 _지수_ 를 가질 수도 있다.
+
+지수가 `exp` 인 10진수는 기본 숫자에 $$10^{exp}$$ 가 곱해진다:
+
+* `1.25e2` 는 1.25 x $$10^2$$, 또는 `125.0`
+* `1.25e-2` 는 1.25 x $$10^{-2}$$ , 또는 `0.0125`
+
+지수가 `exp` 인 16진수는 기본 숫자에 $$2^{exp}$$ 가 곱해진다:
+
+* `0xFp2` 는 15 x $$2^2$$ , 또는 `60.0`
+* `0xFp-2` 는 15 x $$2^{-2}$$ , 또는 `3.75`
+
+아래의 예에서 모든 부동 소수점 리터럴은 10진수 `12.1875` 를 가진다:
+
+```swift
+let decimalDouble = 12.1875
+let exponentDouble = 1.21875e1
+let hexadecimalDouble = 0xC.3p0
+```
+
+숫자 리터럴은 읽기 쉽게 만드는 추가 포맷을 포함할 수 있다. 정수와 부동 소수점 모두 추가 0으로 채워질 수 있으며 가독성을 돕기 위해 밑줄을 포함할 수 있다. 어떤 형식도 리터럴의 기본 값에 영향을 주지 않는다:
+
+```swift
+let paddedDouble = 000123.456
+let oneMillion = 1_000_000
+let justOverOneMillion = 1_000_000.000_000_1
+```
+
+##
 
 
 
 
 
-
-
-
-
+[^1]: 
