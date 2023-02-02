@@ -9,9 +9,9 @@
   * [Views and controls](documentation/uikit/views-and-controls/README.md)
     * [UIView](documentation/uikit/views-and-controls/uiview/README.md)
       * [superview](documentation/uikit/views-and-controls/uiview/superview.md)
-* [Swift](documentation/swift/README.md)
-  * [기본 (The Basics)](documentation/swift/the-basics.md)
-  * [기본 연산자](documentation/swift/undefined.md)
+* [Swift](<README (1).md>)
+  * [기본 (The Basics)](swift/undefined.md)
+  * [기본 연산자](page-1/page-2.md)
 
 ## 🔬 연구 <a href="#study" id="study"></a>
 
